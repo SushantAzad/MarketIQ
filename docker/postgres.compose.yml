@@ -1,0 +1,19 @@
+name: marketiq-data
+services:
+  postgres:
+    image: postgres:17.11
+    environment:
+      POSTGRES_USER: marketiq
+      POSTGRES_DB: marketiq
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in root .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U marketiq -d marketiq"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+volumes:
+  postgres-data:

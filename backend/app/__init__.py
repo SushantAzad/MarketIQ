@@ -1,0 +1,1 @@
+"""MarketIQ application package."""
