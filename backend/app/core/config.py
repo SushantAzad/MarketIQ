@@ -48,8 +48,11 @@ class Settings(BaseSettings):
     llm_timeout_seconds: float = Field(default=60, gt=0, le=300)
     llm_max_output_tokens: int = Field(default=512, ge=64, le=4096)
     rag_top_k: int = Field(default=6, ge=1, le=12)
+    rag_retrieval_mode: Literal["dense", "bm25", "hybrid"] = "hybrid"
     rag_min_score: float = Field(default=0.3, ge=-1, le=1)
     rag_max_context_chars: int = Field(default=12000, ge=1000, le=50000)
+    reranker_enabled: bool = False
+    reranker_batch_size: int = Field(default=8, ge=1, le=40)
 
     sec_enabled: bool = False
     sec_user_agent: str = ""

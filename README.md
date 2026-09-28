@@ -2,7 +2,26 @@
 
 Real Time Financial Intelligence Platform — an incremental, evidence-backed financial research application.
 
-**Current scope: Phase 5 extractive RAG baseline.** SEC ingestion, exact PostgreSQL financial facts, validated Qdrant generations, scoped research, exact passage citations, and persistent research traces are implemented. Model-assisted passage selection requires a configured inference endpoint; this installation currently returns cited evidence only. Free-form synthesis, hybrid retrieval, public API endpoints, calculations, and ML remain later work. The frontend is still a development entry point; use the CLI for financial data and research.
+**Current scope: Phase 8 deterministic financial calculations.** SEC ingestion, PostgreSQL financial facts, hybrid retrieval, bounded offline reranking, cited research traces, and versioned Decimal calculations with persisted operand lineage are implemented. Model-assisted passage selection requires a configured inference endpoint; this installation currently returns cited evidence only. Query routing, free-form synthesis, public API endpoints, and ML remain later work. The frontend is still a development entry point; use the CLI for financial data and research.
+
+Calculate from explicitly dated stored facts:
+
+```powershell
+uv run --locked --directory backend python -m app.database migrate
+uv run --locked --directory backend python -m app.database calculate NVDA net_margin --basis annual --period-end 2026-01-25
+```
+
+Supported formulas include growth, YoY, CAGR, margins, FCF and FCF growth, current ratio, component-based debt/equity, ROE/ROA, a narrowly defined EBITDA, and discrete quarters from compatible YTD facts. Missing components or incompatible periods return explicit unavailable reasons. See [the calculation contract and CLI examples](docs/phase-8-calculation-contract.md).
+
+Enable reranking after downloading the pinned model once:
+
+```powershell
+uv run --locked --directory backend python -m app.research provision-reranker
+$env:RERANKER_ENABLED="true"
+uv run --locked --directory backend python -m app.research ask "What export restrictions are disclosed?" --ticker NVDA --form 10-K
+```
+
+Set `RERANKER_ENABLED=true` in `.env` to persist the setting. Requests use local files only. Reranking failures retain explicitly labelled original-order evidence and suppress answer generation. See [the reranking contract](docs/phase-7-reranking-contract.md).
 
 See [the approved architecture](docs/architecture-proposal.md) for the design and phase gates.
 
@@ -158,7 +177,7 @@ The default is the latest **locally discovered** filing of that exact form. If i
 
 The response includes a `run_id`. Inspect it with `python -m app.research show <run-id>` using the same `uv run --locked --directory backend` prefix. PostgreSQL retains the result, model/prompt metadata, timings, and citation links. It stores a hash of the question rather than the original question text. Endpoint credentials, raw model responses, and exception bodies are not saved.
 
-This is an explicitly temporary **extractive**, dense-only baseline. A configured model selects at most three supporting passages. The application quotes the complete selected chunks and attaches canonical URLs, hashes, generation/chunk IDs, filing dates, and normalized-text offsets. It does not display model-written paraphrases, invented links, calculations, or predictions. Exact source matching does not certify semantic relevance; `relevance_verified` remains false pending evaluation.
+This is an explicitly temporary **extractive** baseline, now using hybrid retrieval by default. A configured model selects at most three supporting passages. The application quotes the complete selected chunks and attaches canonical URLs, hashes, generation/chunk IDs, filing dates, and normalized-text offsets. It does not display model-written paraphrases, invented links, calculations, or predictions. Exact source matching does not certify semantic relevance; `relevance_verified` remains false pending evaluation.
 
 Statuses:
 
@@ -178,4 +197,29 @@ LLM_MODEL=your-installed-model
 
 That URL is an example for an existing local compatible server; this project does not install or download a generative model automatically. Hosted endpoints require HTTPS and may incur provider charges. The adapter posts to `<LLM_BASE_URL>/chat/completions`, requests JSON-object output, and expects standard `choices/message/content` responses with `finish_reason=stop`. Endpoint support must be verified with the selected model. Status reports configuration only, not successful connectivity. Secrets belong in `.env`, not Git or chat.
 
-`RAG_MIN_SCORE=0.3` is an uncalibrated cosine retrieval cutoff, not a confidence probability. Context is bounded by characters without truncating individual passages; the selected endpoint must support the supplied context. See [the Phase 5 contract](docs/phase-5-rag-contract.md) and [verification record](docs/phase-5-verification.md).
+`RAG_MIN_SCORE=0.3` is an uncalibrated cosine cutoff for dense candidates, not a confidence probability or a cutoff for BM25/RRF. Context is bounded by characters without truncating individual passages; the selected endpoint must support the supplied context. See [the Phase 5 contract](docs/phase-5-rag-contract.md) and [verification record](docs/phase-5-verification.md) for the original baseline.
+
+## Hybrid retrieval (Phase 6)
+
+Search combines up to 40 dense and 40 BM25 candidates using reciprocal rank fusion (constant 60). Both retrievers use one SQL-resolved company/form/accession/section/date scope and one generation. Every generation must have validated dense vectors and lexical records before activation.
+
+The current local corpus has already been upgraded. On an existing Phase 5 installation, run:
+
+```powershell
+uv run --locked --directory backend python -m app.database migrate
+uv run --locked --directory backend python -m app.indexing build --rebuild --from-canonical
+```
+
+This rebuilds from PostgreSQL and reuses embeddings. Old dense-only generations remain available for explicit dense searches; hybrid/BM25 require the lexical generation. Subsequent ordinary `build` commands publish both indexes.
+
+```powershell
+uv run --locked --directory backend python -m app.indexing search "export restrictions" --ticker NVDA --form 10-K --latest --mode hybrid
+uv run --locked --directory backend python -m app.indexing search CUDA --ticker NVDA --form 10-K --latest --mode bm25
+uv run --locked --directory backend python -m app.indexing search CUDA --ticker NVDA --form 10-K --latest --mode dense
+```
+
+`--mode` defaults to `hybrid` in the CLI. BM25 mode skips loading the embedding model but still checks Qdrant alias consistency. Research defaults to `RAG_RETRIEVAL_MODE=hybrid`; set it to `dense` or `bm25` in your local environment to compare. Existing LLM settings are unchanged.
+
+Results identify `score_kind` (`cosine`, `bm25`, or `rrf`) and retain separate dense/BM25 scores and ranks. A missing component score means that retriever did not contribute the chunk within its candidate window. Research applies its cosine cutoff before fusion and allows positive BM25 candidates; it never treats a small RRF score as low cosine similarity.
+
+Recorded comparisons for ten queries across seven issuers are in [the Phase 6 baseline JSON](evaluation/phase-6-baseline.json). They are unjudged rank comparisons, not evidence of improved answer accuracy. Regenerate with `$env:PYTHONPATH="backend"` followed by `uv run --locked python scripts/compare_retrieval.py`. See [the hybrid contract](docs/phase-6-hybrid-contract.md) for scoring, versioning, and scale limits, and [the verification record](docs/phase-6-verification.md) for measured checks.

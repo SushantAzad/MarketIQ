@@ -151,6 +151,32 @@ generation_chunks = sa.Table(
     sa.Column("payload", JSONB, nullable=False),
 )
 
+lexical_generations = sa.Table(
+    "lexical_generations",
+    metadata,
+    sa.Column("generation_id", UUID, sa.ForeignKey("index_generations.id"), primary_key=True),
+    sa.Column("version", sa.Text, nullable=False),
+    sa.Column("corpus_manifest", sa.String(64), nullable=False),
+    sa.Column("index_hash", sa.String(64), nullable=False),
+    sa.Column("chunk_count", sa.Integer, nullable=False),
+)
+lexical_chunks = sa.Table(
+    "lexical_chunks",
+    metadata,
+    sa.Column(
+        "generation_id", UUID, sa.ForeignKey("lexical_generations.generation_id"), primary_key=True
+    ),
+    sa.Column("chunk_id", UUID, primary_key=True),
+    sa.Column("content_hash", sa.String(64), nullable=False),
+    sa.Column("terms", JSONB, nullable=False),
+    sa.Column("length", sa.Integer, nullable=False),
+    sa.CheckConstraint("length >= 0", name="length"),
+    sa.ForeignKeyConstraint(
+        ["generation_id", "chunk_id"],
+        ["generation_chunks.generation_id", "generation_chunks.chunk_id"],
+    ),
+)
+
 research_runs = sa.Table(
     "research_runs",
     metadata,
@@ -278,6 +304,7 @@ financial_metrics = sa.Table(
     sa.Column("formula_version", sa.String(40), nullable=False),
     sa.Column("input_set_hash", sa.String(64), nullable=False),
     sa.Column("unavailable_reason", sa.Text),
+    sa.Column("response", JSONB),
     created(),
     sa.UniqueConstraint(
         "company_id",
@@ -296,7 +323,10 @@ metric_inputs = sa.Table(
     metadata,
     sa.Column("metric_id", UUID, sa.ForeignKey("financial_metrics.id"), primary_key=True),
     sa.Column("operand_name", sa.String(80), primary_key=True),
-    sa.Column("fact_id", UUID, sa.ForeignKey("financial_facts.id"), nullable=False),
+    sa.Column("fact_id", UUID, sa.ForeignKey("financial_facts.id")),
+    sa.Column("input_metric_id", UUID, sa.ForeignKey("financial_metrics.id")),
+    sa.CheckConstraint("(fact_id IS NULL) <> (input_metric_id IS NULL)", name="one_input"),
+    sa.CheckConstraint("metric_id <> input_metric_id", name="not_self"),
 )
 data_fetch_logs = sa.Table(
     "data_fetch_logs",

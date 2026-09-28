@@ -1,4 +1,4 @@
-"""Dense baseline with exact extractive claims, explicit abstention, and durable tracing."""
+"""Scoped retrieval with exact extractive claims, explicit abstention, and durable tracing."""
 
 import math
 import time
@@ -19,6 +19,7 @@ from app.indexing.embeddings import Encoder
 from app.indexing.index import search
 from app.research.models import PROMPT_VERSION
 from app.research.provider import CompatibleSelector, ModelFailure, Selector
+from app.research.reranking import LIMIT, LocalReranker, Reranker, rerank
 
 
 class ResearchRequest(BaseModel):
@@ -39,9 +40,21 @@ def answer_from_evidence(
     used_chars = 0
     seen = set()
     for hit in retrieved.get("results", []):
+        kind = hit.get("score_kind", "cosine")
+        if kind not in {"cosine", "bm25", "rrf"}:
+            raise ValueError("Unknown retrieval score kind")
+        dense_score = hit.get("dense_score")
+        sparse_score = hit.get("bm25_score")
+        supported = (
+            dense_score is not None
+            and math.isfinite(dense_score)
+            and dense_score >= settings.rag_min_score
+        ) or (sparse_score is not None and math.isfinite(sparse_score) and sparse_score > 0)
         if (
             not math.isfinite(hit["score"])
-            or hit["score"] < settings.rag_min_score
+            or (kind == "cosine" and hit["score"] < settings.rag_min_score)
+            or (kind == "bm25" and hit["score"] <= 0)
+            or (kind == "rrf" and (hit["score"] <= 0 or not supported))
             or hit["chunk_id"] in seen
         ):
             continue
@@ -71,6 +84,8 @@ def answer_from_evidence(
         "market_data": [],
         "model_outputs": [],
         "generation": retrieved.get("generation"),
+        "retrieval": retrieved.get("retrieval", {"mode": "dense"}),
+        "reranking": retrieved.get("reranking", {"status": "disabled"}),
         "scope": {"ticker": request.ticker, "form": request.form, "accession": request.accession},
         "upstream_refreshed": False,
         "source_freshness": "Stored filings; this request did not check SEC for updates",
@@ -215,12 +230,13 @@ def save_run(
 
 def research(
     engine: sa.Engine,
-    encoder: Encoder,
+    encoder: Encoder | None,
     qdrant: QdrantClient,
     settings: Settings,
     request: ResearchRequest,
     *,
     selector: Selector | None = None,
+    reranker: Reranker | None = None,
     latest: Callable[[Settings, str, str], str | None] = latest_accession,
 ) -> dict[str, Any]:
     started = time.monotonic()
@@ -237,12 +253,36 @@ def research(
             ticker=request.ticker,
             form=request.form,
             accession=accession,
-            limit=settings.rag_top_k,
+            limit=LIMIT if settings.reranker_enabled else settings.rag_top_k,
+            mode=settings.rag_retrieval_mode,
+            min_dense_score=settings.rag_min_score,
         )
     retrieval_ms = round((time.monotonic() - started) * 1000, 3)
+    rerank_failed = False
+    if settings.reranker_enabled and retrieved.get("results"):
+        rerank_started = time.monotonic()
+        try:
+            retrieved = rerank(request.question, retrieved, reranker or LocalReranker(settings))
+            retrieved["reranking"]["total_ms_including_load"] = round(
+                (time.monotonic() - rerank_started) * 1000, 3
+            )
+        except Exception:
+            rerank_failed = True
+            retrieved["reranking"] = {
+                "status": "failed",
+                "reason": "reranker_unavailable_or_invalid_input",
+                "fallback": "original_retrieval_order",
+                "elapsed_ms": round((time.monotonic() - rerank_started) * 1000, 3),
+            }
+    elif settings.reranker_enabled:
+        retrieved["reranking"] = {"status": "no_candidates"}
     if selector is None and settings.llm_provider != "disabled":
         selector = CompatibleSelector(settings)
-    response = answer_from_evidence(request, retrieved, settings, selector)
+    response = answer_from_evidence(
+        request, retrieved, settings, None if rerank_failed else selector
+    )
+    if rerank_failed:
+        response["reason"] = "reranker_failed"
     if accession is None:
         response["reason"] = "no_discovered_filing"
     elif not retrieved.get("results"):

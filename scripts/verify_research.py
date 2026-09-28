@@ -29,6 +29,8 @@ def main() -> None:
             ),
         )
         assert result["retrieved_evidence"]
+        if settings.reranker_enabled:
+            assert result["reranking"]["status"] == "applied"
         assert read_run(engine, UUID(result["run_id"])) == result
         assert all(
             e["source_url"].startswith("https://www.sec.gov/Archives/")
@@ -61,6 +63,8 @@ def main() -> None:
             "passages": len(result["retrieved_evidence"]),
             "scope": result["scope"],
             "generation": result["generation"],
+            "retrieval": result["retrieval"],
+            "reranking": result["reranking"],
             "trace_round_trip": True,
             "absent_evidence_refused": True,
             "provider": settings.llm_provider,

@@ -8,6 +8,18 @@ import sqlalchemy as sa
 from app.database import schema as db
 from app.services.normalization import METRIC_CONCEPTS, VERSION
 
+# Read mappings only: ingestion remains lossless and its normalization version unchanged.
+QUERY_CONCEPTS = {
+    **METRIC_CONCEPTS,
+    "short_term_debt": ("ShortTermBorrowings",),
+    "current_long_term_debt": ("LongTermDebtCurrent",),
+    "noncurrent_debt": ("LongTermDebtNoncurrent",),
+    "interest_expense": ("InterestExpense",),
+    "income_tax_expense": ("IncomeTaxExpenseBenefit",),
+    "depreciation": ("Depreciation",),
+    "amortization": ("AmortizationOfIntangibleAssets",),
+}
+
 
 def financial_value(
     connection: sa.Connection,
@@ -20,7 +32,7 @@ def financial_value(
     as_of: datetime | None = None,
     freshness_seconds: int = 600,
 ) -> dict[str, Any]:
-    if metric not in METRIC_CONCEPTS:
+    if metric not in QUERY_CONCEPTS:
         raise ValueError("Unknown financial metric")
     if basis not in {"instant", "quarter", "annual", "ytd_6m", "ytd_9m", "duration_other"}:
         raise ValueError("Unknown period basis")
@@ -69,7 +81,7 @@ def financial_value(
     )
     if snapshot is None:
         return {**empty, "reason": "No source snapshot observed by the requested cutoff"}
-    concepts = METRIC_CONCEPTS[metric]
+    concepts = QUERY_CONCEPTS[metric]
     priority = sa.case(
         {concept: index for index, concept in enumerate(concepts)},
         value=db.financial_facts.c.concept,

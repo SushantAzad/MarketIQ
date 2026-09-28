@@ -33,8 +33,10 @@ def main() -> int:
     query.add_argument("--section")
     query.add_argument("--accepted-before", type=datetime.fromisoformat)
     query.add_argument("--limit", type=int, default=5)
+    query.add_argument("--mode", choices=["dense", "bm25", "hybrid"], default="hybrid")
     query.add_argument("--latest", action="store_true", help="Requires ticker and exact form")
     args = parser.parse_args()
+    encoder: SentenceEncoder | None
     if args.command == "search" and args.latest and (not args.ticker or not args.form):
         parser.error("--latest requires --ticker and --form")
     try:
@@ -69,8 +71,13 @@ def main() -> int:
                         "consistent": active is not None and active["collection_name"] == target,
                     }
                 else:
-                    encoder = SentenceEncoder(settings)
+                    encoder = (
+                        None
+                        if args.command == "search" and args.mode == "bm25"
+                        else SentenceEncoder(settings)
+                    )
                     if args.command == "build":
+                        assert encoder is not None
                         output = publish(
                             engine,
                             settings,
@@ -104,6 +111,7 @@ def main() -> int:
                                 section=args.section,
                                 accepted_before=args.accepted_before,
                                 limit=args.limit,
+                                mode=args.mode,
                             )
                             if args.latest:
                                 output["latest_discovered_accession"] = accession

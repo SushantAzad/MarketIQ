@@ -1,0 +1,2317 @@
+{
+  "recorded_at": "2026-09-28T13:06:38.656894+00:00",
+  "generation": "690b5711-4c29-49de-b135-3bb1a7f8ebe3",
+  "scope": "fixed indexed corpus; not a fresh SEC or latest-discovered check",
+  "human_relevance_labels": false,
+  "quality_improvement_claimed": false,
+  "timings": "single local warm-model samples; not a latency benchmark",
+  "comparisons": [
+    {
+      "query": "export restrictions and supply chain risks",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 256.581,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 40,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "2b4a9ea3-5774-503d-a052-c03bf518c0ba",
+              "chunk_hash": "63b5771fecc070e4cef2b10b042cf01065a1a564074b042225c323b0e55fc407",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.75742555,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.75742555,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "5ebf4479-426f-5e07-9a30-968f9767c46e",
+              "chunk_hash": "d2564a74f0079439961eb6e905a32a54922eb795ff16f432b8815be0df2f9def",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.70496076,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.70496076,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "f58e0011-c072-53c3-826b-18dc585ad931",
+              "chunk_hash": "21dbbfc11c50615c71572f205771e34d4b064b29e678b32be2aa65000483f050",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.66441894,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.66441894,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "238e145b-edf0-5efe-b3df-94475a290e10",
+              "chunk_hash": "a2df5e802dfdc39d646aabea83752093308ab4a525247fe7405baf6da656e2eb",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.638819,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.638819,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "ad932db4-407c-5c16-b8ed-7e5aec84f0a0",
+              "chunk_hash": "2ad134527edb218d9adb2db3a3ea5cc58eb711feb53bfb23565b850a13f2a4c8",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.6345709,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.6345709,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 113.704,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 0,
+            "bm25_candidates": 40
+          },
+          "hits": [
+            {
+              "chunk_id": "fe413582-cade-5d0e-b3cf-0cc8e1b94640",
+              "chunk_hash": "dfd8c24dd5c4491cec2c9a2504067f07800966ea8e470a73cad25d7354592836",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 12.241668834060995,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 12.241668834060995
+            },
+            {
+              "chunk_id": "2b4a9ea3-5774-503d-a052-c03bf518c0ba",
+              "chunk_hash": "63b5771fecc070e4cef2b10b042cf01065a1a564074b042225c323b0e55fc407",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 11.439120624524424,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 2,
+              "dense_score": null,
+              "bm25_score": 11.439120624524424
+            },
+            {
+              "chunk_id": "f40f3be8-9062-50f9-935e-c0202ad7857b",
+              "chunk_hash": "f5cbe6a1a2fb3074ee342ef8c4fa083f99b43fa3d251a5802af4941a72bf428d",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 10.73335721562482,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 3,
+              "dense_score": null,
+              "bm25_score": 10.73335721562482
+            },
+            {
+              "chunk_id": "c6d4dc71-5919-525d-b212-0a85707e5965",
+              "chunk_hash": "e3526c014dd06949933ead83a94c18647ef90ca34a63bbe096f9a2a7fcb6413a",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 10.507179646496436,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 4,
+              "dense_score": null,
+              "bm25_score": 10.507179646496436
+            },
+            {
+              "chunk_id": "db56812f-cc77-595a-9969-dd1441eaa22c",
+              "chunk_hash": "9c6f2c22cb85b815e7b914739f800b019871818a5225e64e236eb74e516824e4",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 10.4473739375203,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 5,
+              "dense_score": null,
+              "bm25_score": 10.4473739375203
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 146.475,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 40,
+            "bm25_candidates": 40
+          },
+          "hits": [
+            {
+              "chunk_id": "2b4a9ea3-5774-503d-a052-c03bf518c0ba",
+              "chunk_hash": "63b5771fecc070e4cef2b10b042cf01065a1a564074b042225c323b0e55fc407",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.03252247488101534,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": 2,
+              "dense_score": 0.75742555,
+              "bm25_score": 11.439120624524424
+            },
+            {
+              "chunk_id": "c6d4dc71-5919-525d-b212-0a85707e5965",
+              "chunk_hash": "e3526c014dd06949933ead83a94c18647ef90ca34a63bbe096f9a2a7fcb6413a",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.030776515151515152,
+              "score_kind": "rrf",
+              "dense_rank": 6,
+              "bm25_rank": 4,
+              "dense_score": 0.62949806,
+              "bm25_score": 10.507179646496436
+            },
+            {
+              "chunk_id": "fe413582-cade-5d0e-b3cf-0cc8e1b94640",
+              "chunk_hash": "dfd8c24dd5c4491cec2c9a2504067f07800966ea8e470a73cad25d7354592836",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.030679156908665108,
+              "score_kind": "rrf",
+              "dense_rank": 10,
+              "bm25_rank": 1,
+              "dense_score": 0.60138404,
+              "bm25_score": 12.241668834060995
+            },
+            {
+              "chunk_id": "f40f3be8-9062-50f9-935e-c0202ad7857b",
+              "chunk_hash": "f5cbe6a1a2fb3074ee342ef8c4fa083f99b43fa3d251a5802af4941a72bf428d",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.03057889822595705,
+              "score_kind": "rrf",
+              "dense_rank": 8,
+              "bm25_rank": 3,
+              "dense_score": 0.6191834,
+              "bm25_score": 10.73335721562482
+            },
+            {
+              "chunk_id": "db56812f-cc77-595a-9969-dd1441eaa22c",
+              "chunk_hash": "9c6f2c22cb85b815e7b914739f800b019871818a5225e64e236eb74e516824e4",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.029273504273504274,
+              "score_kind": "rrf",
+              "dense_rank": 12,
+              "bm25_rank": 5,
+              "dense_score": 0.5930567,
+              "bm25_score": 10.4473739375203
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 1,
+      "hybrid_chunks_outside_dense_top_5": 4
+    },
+    {
+      "query": "CUDA",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 97.996,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 40,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "f0714b6d-ca45-52e3-ac92-c65d9bf89011",
+              "chunk_hash": "845e9823d0645d73d7f43bb3a7b80888e147a44784e81bdb657ad0e2d5b026e9",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.43583035,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.43583035,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "2aa34336-7082-5345-8cc6-a57edf792bc2",
+              "chunk_hash": "90ecee40af2b582d7d8118381f1bc3e63b50b8b361559befbdacd26ca8f84ce8",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.42098498,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.42098498,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "58a3b65f-0652-580a-ac68-319321fd413d",
+              "chunk_hash": "19fef8548046a62cb81262bc3397bb8849985206f564848d195e803df9beec26",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.4126377,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.4126377,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "d9acc12d-2f20-5894-b18a-f81351a2567e",
+              "chunk_hash": "95fbb846d2076f3b54777a85736525e12b4ac5cc52ccda9d76d2a595ab3504d4",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.3528003,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.3528003,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "c38f2a47-d51c-575d-815b-e0d97398d1bb",
+              "chunk_hash": "20757939d7cfa03ff398b72f295248693921fa696747662909efd34a5dc1c9f7",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.34676972,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.34676972,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 101.143,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 0,
+            "bm25_candidates": 6
+          },
+          "hits": [
+            {
+              "chunk_id": "58a3b65f-0652-580a-ac68-319321fd413d",
+              "chunk_hash": "19fef8548046a62cb81262bc3397bb8849985206f564848d195e803df9beec26",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 4.048141454588356,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 4.048141454588356
+            },
+            {
+              "chunk_id": "ae419447-5cc9-5e6a-b1ea-4b9f56760960",
+              "chunk_hash": "4290735e8e3758d19944681ea12ba197b5c130c71d9f9fded25c47dbc29c9e73",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 4.048141454588356,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 2,
+              "dense_score": null,
+              "bm25_score": 4.048141454588356
+            },
+            {
+              "chunk_id": "d9acc12d-2f20-5894-b18a-f81351a2567e",
+              "chunk_hash": "95fbb846d2076f3b54777a85736525e12b4ac5cc52ccda9d76d2a595ab3504d4",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 4.048141454588356,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 3,
+              "dense_score": null,
+              "bm25_score": 4.048141454588356
+            },
+            {
+              "chunk_id": "f0714b6d-ca45-52e3-ac92-c65d9bf89011",
+              "chunk_hash": "845e9823d0645d73d7f43bb3a7b80888e147a44784e81bdb657ad0e2d5b026e9",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 4.048141454588356,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 4,
+              "dense_score": null,
+              "bm25_score": 4.048141454588356
+            },
+            {
+              "chunk_id": "2aa34336-7082-5345-8cc6-a57edf792bc2",
+              "chunk_hash": "90ecee40af2b582d7d8118381f1bc3e63b50b8b361559befbdacd26ca8f84ce8",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 4.033596632634432,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 5,
+              "dense_score": null,
+              "bm25_score": 4.033596632634432
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 181.0,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 40,
+            "bm25_candidates": 6
+          },
+          "hits": [
+            {
+              "chunk_id": "58a3b65f-0652-580a-ac68-319321fd413d",
+              "chunk_hash": "19fef8548046a62cb81262bc3397bb8849985206f564848d195e803df9beec26",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.032266458495966696,
+              "score_kind": "rrf",
+              "dense_rank": 3,
+              "bm25_rank": 1,
+              "dense_score": 0.4126377,
+              "bm25_score": 4.048141454588356
+            },
+            {
+              "chunk_id": "f0714b6d-ca45-52e3-ac92-c65d9bf89011",
+              "chunk_hash": "845e9823d0645d73d7f43bb3a7b80888e147a44784e81bdb657ad0e2d5b026e9",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.032018442622950824,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": 4,
+              "dense_score": 0.43583035,
+              "bm25_score": 4.048141454588356
+            },
+            {
+              "chunk_id": "2aa34336-7082-5345-8cc6-a57edf792bc2",
+              "chunk_hash": "90ecee40af2b582d7d8118381f1bc3e63b50b8b361559befbdacd26ca8f84ce8",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.0315136476426799,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": 5,
+              "dense_score": 0.42098498,
+              "bm25_score": 4.033596632634432
+            },
+            {
+              "chunk_id": "d9acc12d-2f20-5894-b18a-f81351a2567e",
+              "chunk_hash": "95fbb846d2076f3b54777a85736525e12b4ac5cc52ccda9d76d2a595ab3504d4",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.03149801587301587,
+              "score_kind": "rrf",
+              "dense_rank": 4,
+              "bm25_rank": 3,
+              "dense_score": 0.3528003,
+              "bm25_score": 4.048141454588356
+            },
+            {
+              "chunk_id": "ae419447-5cc9-5e6a-b1ea-4b9f56760960",
+              "chunk_hash": "4290735e8e3758d19944681ea12ba197b5c130c71d9f9fded25c47dbc29c9e73",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.031054405392392875,
+              "score_kind": "rrf",
+              "dense_rank": 7,
+              "bm25_rank": 2,
+              "dense_score": 0.33659232,
+              "bm25_score": 4.048141454588356
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 4,
+      "hybrid_chunks_outside_dense_top_5": 1
+    },
+    {
+      "query": "H100",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 116.358,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 40,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "e32b18d3-f799-596c-820f-922474bd1ae7",
+              "chunk_hash": "d877d62870ecd3f600c0218dfb64ac0bc33b47e282fe1fbadae130536c2463f7",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.36733615,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.36733615,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "d25738e4-37da-5dc3-88fc-dfa596b655ed",
+              "chunk_hash": "a7abfcac282e6d42575594846c0cbaf000461100667c9a483ccc0ff8c727d9fe",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.35366523,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.35366523,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "8ce08644-54d8-5994-8569-a59bac088b6f",
+              "chunk_hash": "17314e3c708fa04e2e49174562fc84350a2e089bb92a623cf4c84f9212ffea69",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.33086455,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.33086455,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "f81742e3-c61a-5e66-92cd-8247251876cf",
+              "chunk_hash": "0dab9205093455437fa63758fa7faab1aa887eab0845112fbf6a6e4d5d3c5cf2",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.31883502,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.31883502,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "64e8c660-3b2f-5b0c-889a-37b92a647261",
+              "chunk_hash": "d14e686e9713d4069c7c94593d725d4c526f4279462aea7db00d195dd6d5234e",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.31318873,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.31318873,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 124.64,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 0,
+            "bm25_candidates": 4
+          },
+          "hits": [
+            {
+              "chunk_id": "64e8c660-3b2f-5b0c-889a-37b92a647261",
+              "chunk_hash": "d14e686e9713d4069c7c94593d725d4c526f4279462aea7db00d195dd6d5234e",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 7.496313545199542,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 7.496313545199542
+            },
+            {
+              "chunk_id": "8bc580a1-c7fe-50ec-9deb-91d2555ab569",
+              "chunk_hash": "fa20bd9e02f947cfc07065f0aec5f0e466f35de67780a6ed6ce186c647f92355",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 6.864403792288812,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 2,
+              "dense_score": null,
+              "bm25_score": 6.864403792288812
+            },
+            {
+              "chunk_id": "e32b18d3-f799-596c-820f-922474bd1ae7",
+              "chunk_hash": "d877d62870ecd3f600c0218dfb64ac0bc33b47e282fe1fbadae130536c2463f7",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 4.592297715471731,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 3,
+              "dense_score": null,
+              "bm25_score": 4.592297715471731
+            },
+            {
+              "chunk_id": "a36ff16f-9049-5de1-bd1b-d62b8be34f78",
+              "chunk_hash": "15cb66b5bf354eec1bfd073ee62e7f38ef602d9157e7301fd5e508d287fbac94",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 4.458373332554641,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 4,
+              "dense_score": null,
+              "bm25_score": 4.458373332554641
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 180.855,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 396,
+            "dense_candidates": 40,
+            "bm25_candidates": 4
+          },
+          "hits": [
+            {
+              "chunk_id": "e32b18d3-f799-596c-820f-922474bd1ae7",
+              "chunk_hash": "d877d62870ecd3f600c0218dfb64ac0bc33b47e282fe1fbadae130536c2463f7",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.032266458495966696,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": 3,
+              "dense_score": 0.36733615,
+              "bm25_score": 4.592297715471731
+            },
+            {
+              "chunk_id": "64e8c660-3b2f-5b0c-889a-37b92a647261",
+              "chunk_hash": "d14e686e9713d4069c7c94593d725d4c526f4279462aea7db00d195dd6d5234e",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.03177805800756621,
+              "score_kind": "rrf",
+              "dense_rank": 5,
+              "bm25_rank": 1,
+              "dense_score": 0.31318873,
+              "bm25_score": 7.496313545199542
+            },
+            {
+              "chunk_id": "8bc580a1-c7fe-50ec-9deb-91d2555ab569",
+              "chunk_hash": "fa20bd9e02f947cfc07065f0aec5f0e466f35de67780a6ed6ce186c647f92355",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.030834914611005692,
+              "score_kind": "rrf",
+              "dense_rank": 8,
+              "bm25_rank": 2,
+              "dense_score": 0.30371612,
+              "bm25_score": 6.864403792288812
+            },
+            {
+              "chunk_id": "a36ff16f-9049-5de1-bd1b-d62b8be34f78",
+              "chunk_hash": "15cb66b5bf354eec1bfd073ee62e7f38ef602d9157e7301fd5e508d287fbac94",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.029138513513513514,
+              "score_kind": "rrf",
+              "dense_rank": 14,
+              "bm25_rank": 4,
+              "dense_score": 0.22664022,
+              "bm25_score": 4.458373332554641
+            },
+            {
+              "chunk_id": "d25738e4-37da-5dc3-88fc-dfa596b655ed",
+              "chunk_hash": "a7abfcac282e6d42575594846c0cbaf000461100667c9a483ccc0ff8c727d9fe",
+              "document_hash": "5f8729f1b6ef0ac30be0373e997ebc9ff59c101b0d509ba64dea42329387b3c5",
+              "accession_number": "0001045810-26-000021",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "score": 0.016129032258064516,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.35366523,
+              "bm25_score": null
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 2,
+      "hybrid_chunks_outside_dense_top_5": 2
+    },
+    {
+      "query": "data center revenue demand",
+      "ticker": "NVDA",
+      "form": "10-Q",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 75.203,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 180,
+            "dense_candidates": 40,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "94b00e82-3980-568e-96c8-ccb072df7339",
+              "chunk_hash": "41766af10a12e72dd7e1252ffb28b818af44e4084f75eafe52377625c680465c",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.653571,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.653571,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "9561e204-8f36-5e9f-abbe-f5b2895317bb",
+              "chunk_hash": "c74a408eecafb5b3ef20afec3def23b3cb88cadd68047474748b024b42d491eb",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.6135781,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.6135781,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "29566eb2-7645-5215-bf39-07ad5d432fff",
+              "chunk_hash": "af69cba37e8f80ef26689acc9c49e628dd156c8c78c876894d174f2e87a5e59e",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.61322033,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.61322033,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "75dbd4f6-7d90-53a6-bdc7-c16d9ead55ab",
+              "chunk_hash": "87e7c21c27f900882990b36af44e117c1ebf7ce05430f936069fed68bad8599f",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.5951414,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.5951414,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "0fe91a3a-e58d-54d7-a23b-2e8638751624",
+              "chunk_hash": "b952b8a061986bf7f1c8118f113e1da45377097d416a8e4d13d5d1047aa915f1",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.59137285,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.59137285,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 68.842,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 180,
+            "dense_candidates": 0,
+            "bm25_candidates": 40
+          },
+          "hits": [
+            {
+              "chunk_id": "baff2315-6845-5c96-879d-04bea5efa582",
+              "chunk_hash": "4b7a7a04c7a1cf3c0e0c9d64e0b6c5cdf3cb5d888b574b54458fc4f8714767f6",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 8.651865005191228,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 8.651865005191228
+            },
+            {
+              "chunk_id": "94b00e82-3980-568e-96c8-ccb072df7339",
+              "chunk_hash": "41766af10a12e72dd7e1252ffb28b818af44e4084f75eafe52377625c680465c",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 8.235677328665474,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 2,
+              "dense_score": null,
+              "bm25_score": 8.235677328665474
+            },
+            {
+              "chunk_id": "d3aac199-03c6-5da1-8d14-40530549b98c",
+              "chunk_hash": "b70d64ebf2f37085599dd2fe58b67e5b5742e9b292ad4d754851267b27cf84eb",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 8.19595436107507,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 3,
+              "dense_score": null,
+              "bm25_score": 8.19595436107507
+            },
+            {
+              "chunk_id": "1036d63a-f832-5429-9d87-5fb5be542518",
+              "chunk_hash": "b9edf8b81b08621a3d043402f7ae17d9653c9804b893c9a5f238b5ee05bab486",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 7.525896322777276,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 4,
+              "dense_score": null,
+              "bm25_score": 7.525896322777276
+            },
+            {
+              "chunk_id": "3f39f748-6c03-59a1-9d41-3ac6d0840306",
+              "chunk_hash": "14cbbcda752eb5b141c1a00a8cce557d06910256d3a30ad28898821dd67068e1",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 7.499118291483402,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 5,
+              "dense_score": null,
+              "bm25_score": 7.499118291483402
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 135.399,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 180,
+            "dense_candidates": 40,
+            "bm25_candidates": 40
+          },
+          "hits": [
+            {
+              "chunk_id": "94b00e82-3980-568e-96c8-ccb072df7339",
+              "chunk_hash": "41766af10a12e72dd7e1252ffb28b818af44e4084f75eafe52377625c680465c",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.03252247488101534,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": 2,
+              "dense_score": 0.653571,
+              "bm25_score": 8.235677328665474
+            },
+            {
+              "chunk_id": "baff2315-6845-5c96-879d-04bea5efa582",
+              "chunk_hash": "4b7a7a04c7a1cf3c0e0c9d64e0b6c5cdf3cb5d888b574b54458fc4f8714767f6",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.03131881575727918,
+              "score_kind": "rrf",
+              "dense_rank": 7,
+              "bm25_rank": 1,
+              "dense_score": 0.5540312,
+              "bm25_score": 8.651865005191228
+            },
+            {
+              "chunk_id": "9561e204-8f36-5e9f-abbe-f5b2895317bb",
+              "chunk_hash": "c74a408eecafb5b3ef20afec3def23b3cb88cadd68047474748b024b42d491eb",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.0304147465437788,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": 10,
+              "dense_score": 0.6135781,
+              "bm25_score": 6.2346577414543445
+            },
+            {
+              "chunk_id": "d3aac199-03c6-5da1-8d14-40530549b98c",
+              "chunk_hash": "b70d64ebf2f37085599dd2fe58b67e5b5742e9b292ad4d754851267b27cf84eb",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.030158730158730156,
+              "score_kind": "rrf",
+              "dense_rank": 10,
+              "bm25_rank": 3,
+              "dense_score": 0.5430879,
+              "bm25_score": 8.19595436107507
+            },
+            {
+              "chunk_id": "4a032265-c878-5211-9f52-c77cbfcee1e3",
+              "chunk_hash": "ea0103426f061792f71e46f96c3938988a49e85b86ecb6973109fa4028453e6f",
+              "document_hash": "ccc194e43e2ee0a52ba9db0d4f204faac9405a7bfaa2668f9d60183cf84ed7c3",
+              "accession_number": "0001045810-26-000075",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "score": 0.02904040404040404,
+              "score_kind": "rrf",
+              "dense_rank": 6,
+              "bm25_rank": 12,
+              "dense_score": 0.5719043,
+              "bm25_score": 6.097141266296026
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 1,
+      "hybrid_chunks_outside_dense_top_5": 3
+    },
+    {
+      "query": "executive officer",
+      "ticker": "MSFT",
+      "form": "8-K",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 74.586,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 6,
+            "dense_candidates": 6,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "88bd4913-6bd0-5091-8414-0738384cf127",
+              "chunk_hash": "121e1a11ec2fc559a5a19991b9357bc6cb13a9c9e1cbb1abb949fb15ca7e7dfb",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.19395036,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.19395036,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "bb53ba55-e92f-5a39-9fe4-e28f8e0cd036",
+              "chunk_hash": "89e2b010ff6c2c5bb93b4e219568efbf389dcddf452191541ea6b73a6a707810",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.18937159,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.18937159,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "de74c573-fc00-501f-a376-e92e64ea39c3",
+              "chunk_hash": "8d6c3b18af444dacaac0477b95176983c6198d555b10b5956af1609ba150857c",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.18826973,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.18826973,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "b4373bdd-efc1-5841-8ed0-8f2803f0cd4f",
+              "chunk_hash": "0ee745d328fa4f700566cdece1299d2cf2204fc9a2134876b26ebe36116b69c9",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.17809543,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.17809543,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "c4730279-a8b3-58d7-b6ee-901652be1649",
+              "chunk_hash": "67be6476a419b3d9d7bb709c2abcc9177c086d3508387a1376fc819cb5052957",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.16333896,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.16333896,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 31.294,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 6,
+            "dense_candidates": 0,
+            "bm25_candidates": 1
+          },
+          "hits": [
+            {
+              "chunk_id": "b4373bdd-efc1-5841-8ed0-8f2803f0cd4f",
+              "chunk_hash": "0ee745d328fa4f700566cdece1299d2cf2204fc9a2134876b26ebe36116b69c9",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 1.6271475155132686,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 1.6271475155132686
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 64.512,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 6,
+            "dense_candidates": 6,
+            "bm25_candidates": 1
+          },
+          "hits": [
+            {
+              "chunk_id": "b4373bdd-efc1-5841-8ed0-8f2803f0cd4f",
+              "chunk_hash": "0ee745d328fa4f700566cdece1299d2cf2204fc9a2134876b26ebe36116b69c9",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.032018442622950824,
+              "score_kind": "rrf",
+              "dense_rank": 4,
+              "bm25_rank": 1,
+              "dense_score": 0.17809543,
+              "bm25_score": 1.6271475155132686
+            },
+            {
+              "chunk_id": "88bd4913-6bd0-5091-8414-0738384cf127",
+              "chunk_hash": "121e1a11ec2fc559a5a19991b9357bc6cb13a9c9e1cbb1abb949fb15ca7e7dfb",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.01639344262295082,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.19395036,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "bb53ba55-e92f-5a39-9fe4-e28f8e0cd036",
+              "chunk_hash": "89e2b010ff6c2c5bb93b4e219568efbf389dcddf452191541ea6b73a6a707810",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.016129032258064516,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.18937159,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "de74c573-fc00-501f-a376-e92e64ea39c3",
+              "chunk_hash": "8d6c3b18af444dacaac0477b95176983c6198d555b10b5956af1609ba150857c",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.015873015873015872,
+              "score_kind": "rrf",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.18826973,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "c4730279-a8b3-58d7-b6ee-901652be1649",
+              "chunk_hash": "67be6476a419b3d9d7bb709c2abcc9177c086d3508387a1376fc819cb5052957",
+              "document_hash": "03b45d5e78dbbec2afb1fef756aa30a75a3e309fb2ae7144695766d5f3ee254a",
+              "accession_number": "0001193125-26-380280",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+              "score": 0.015384615384615385,
+              "score_kind": "rrf",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.16333896,
+              "bm25_score": null
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 1,
+      "hybrid_chunks_outside_dense_top_5": 0
+    },
+    {
+      "query": "financial statements exhibits",
+      "ticker": "AAPL",
+      "form": "8-K/A",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 64.192,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 7,
+            "dense_candidates": 7,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "47507c99-baca-576b-ad3d-8fa38187c8c0",
+              "chunk_hash": "716bdab273b8ef52c410852914e2b83ece967f91ab923f5b0f953c739dc52263",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.3961767,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.3961767,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "6045b2c8-f11f-50fb-b929-ec52ae1bc0da",
+              "chunk_hash": "ef643e0e9b9de999d0a42134e341ceadba8723725b1850f84ecbcb17f40e1396",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.31740606,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.31740606,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "b0a9560f-e3ba-5cf4-986c-10948a7aecd0",
+              "chunk_hash": "19361660b6b802cbda7f218416c022c1bddb1e3cf27d40a6edfb18a9555c8f8d",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.29906115,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.29906115,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "588ba29c-eb88-5b35-a1fe-b0c85ba22e4e",
+              "chunk_hash": "9d51215e416c1444cd9037e6456ad90cb21d7e71b8240386781d0a2d22c14e7f",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.23212597,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.23212597,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "cbec7373-6df7-51cc-b1f1-6538d20b21ae",
+              "chunk_hash": "8adc5a5089e3b5bb5d9eb2aca55d99735683869c46878d5bdfca10826339fdf7",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.2298653,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.2298653,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 29.792,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 7,
+            "dense_candidates": 0,
+            "bm25_candidates": 1
+          },
+          "hits": [
+            {
+              "chunk_id": "6045b2c8-f11f-50fb-b929-ec52ae1bc0da",
+              "chunk_hash": "ef643e0e9b9de999d0a42134e341ceadba8723725b1850f84ecbcb17f40e1396",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 1.675929731627181,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 1.675929731627181
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 47.425,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 7,
+            "dense_candidates": 7,
+            "bm25_candidates": 1
+          },
+          "hits": [
+            {
+              "chunk_id": "6045b2c8-f11f-50fb-b929-ec52ae1bc0da",
+              "chunk_hash": "ef643e0e9b9de999d0a42134e341ceadba8723725b1850f84ecbcb17f40e1396",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.03252247488101534,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": 1,
+              "dense_score": 0.31740606,
+              "bm25_score": 1.675929731627181
+            },
+            {
+              "chunk_id": "47507c99-baca-576b-ad3d-8fa38187c8c0",
+              "chunk_hash": "716bdab273b8ef52c410852914e2b83ece967f91ab923f5b0f953c739dc52263",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.01639344262295082,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.3961767,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "b0a9560f-e3ba-5cf4-986c-10948a7aecd0",
+              "chunk_hash": "19361660b6b802cbda7f218416c022c1bddb1e3cf27d40a6edfb18a9555c8f8d",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.015873015873015872,
+              "score_kind": "rrf",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.29906115,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "588ba29c-eb88-5b35-a1fe-b0c85ba22e4e",
+              "chunk_hash": "9d51215e416c1444cd9037e6456ad90cb21d7e71b8240386781d0a2d22c14e7f",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.015625,
+              "score_kind": "rrf",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.23212597,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "cbec7373-6df7-51cc-b1f1-6538d20b21ae",
+              "chunk_hash": "8adc5a5089e3b5bb5d9eb2aca55d99735683869c46878d5bdfca10826339fdf7",
+              "document_hash": "b4ebbac4103935908249eb293c91735681646c241572fefaf3551ab84843df87",
+              "accession_number": "0001140361-26-035325",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+              "score": 0.015384615384615385,
+              "score_kind": "rrf",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.2298653,
+              "bm25_score": null
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 1,
+      "hybrid_chunks_outside_dense_top_5": 0
+    },
+    {
+      "query": "material agreement",
+      "ticker": "AMZN",
+      "form": "8-K",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 29.277,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 10,
+            "dense_candidates": 10,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "c124711a-e4e6-5b73-a587-ec0242196884",
+              "chunk_hash": "0632f33378373bf31b285bc9a8ac83eb0e1f0a3e568b296af4a5b6ceab44c4e7",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.3507532,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.3507532,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "69053133-f917-58ee-af91-d419ebb2e2a7",
+              "chunk_hash": "7dffbf447bb36a2239d3a901be0103d24f08de0c278623719dbc1f80fd6875e9",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.34576765,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.34576765,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "8b1aaa95-1241-5153-b3d5-8ee62e882547",
+              "chunk_hash": "6d950375dc4e0fb2471a5f80730cd7d649d9f669f7348fab6284f90959ba8617",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.3315,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.3315,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "8d31b223-037a-593f-bd6f-b284a7cc1a65",
+              "chunk_hash": "4f31f0f3b3fa506dc6b9389ad41b987e75b6d5484e84c6b9861a19446bba56f5",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.2942873,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.2942873,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "f58d45c7-930e-559a-a80c-22d33227e31a",
+              "chunk_hash": "f22c1f5260e1bdbf39b019739816904dc582f6ec7b91041b61561ce31169d62a",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.2538683,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.2538683,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 7.552,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 10,
+            "dense_candidates": 0,
+            "bm25_candidates": 5
+          },
+          "hits": [
+            {
+              "chunk_id": "f58d45c7-930e-559a-a80c-22d33227e31a",
+              "chunk_hash": "f22c1f5260e1bdbf39b019739816904dc582f6ec7b91041b61561ce31169d62a",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 1.4620350675743847,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 1.4620350675743847
+            },
+            {
+              "chunk_id": "b371436f-c759-50a9-a7bf-f41d7d0774f4",
+              "chunk_hash": "c368018423ada3a7c124160154f89399b65c59af7734929308d852cefef0dd82",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 1.3022355192182915,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 2,
+              "dense_score": null,
+              "bm25_score": 1.3022355192182915
+            },
+            {
+              "chunk_id": "a9dfbfd2-f5ed-566b-885f-c01c7862c01a",
+              "chunk_hash": "bba07d53b0dbfe019d4b0d757495c41253668cdcea7dd5ad49d70f3c10116ca1",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 1.2403701147350576,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 3,
+              "dense_score": null,
+              "bm25_score": 1.2403701147350576
+            },
+            {
+              "chunk_id": "69053133-f917-58ee-af91-d419ebb2e2a7",
+              "chunk_hash": "7dffbf447bb36a2239d3a901be0103d24f08de0c278623719dbc1f80fd6875e9",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 1.1649646148970891,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 4,
+              "dense_score": null,
+              "bm25_score": 1.1649646148970891
+            },
+            {
+              "chunk_id": "c124711a-e4e6-5b73-a587-ec0242196884",
+              "chunk_hash": "0632f33378373bf31b285bc9a8ac83eb0e1f0a3e568b296af4a5b6ceab44c4e7",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 1.064413563901656,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 5,
+              "dense_score": null,
+              "bm25_score": 1.064413563901656
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 59.349,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 10,
+            "dense_candidates": 10,
+            "bm25_candidates": 5
+          },
+          "hits": [
+            {
+              "chunk_id": "c124711a-e4e6-5b73-a587-ec0242196884",
+              "chunk_hash": "0632f33378373bf31b285bc9a8ac83eb0e1f0a3e568b296af4a5b6ceab44c4e7",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.03177805800756621,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": 5,
+              "dense_score": 0.3507532,
+              "bm25_score": 1.064413563901656
+            },
+            {
+              "chunk_id": "f58d45c7-930e-559a-a80c-22d33227e31a",
+              "chunk_hash": "f22c1f5260e1bdbf39b019739816904dc582f6ec7b91041b61561ce31169d62a",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.03177805800756621,
+              "score_kind": "rrf",
+              "dense_rank": 5,
+              "bm25_rank": 1,
+              "dense_score": 0.2538683,
+              "bm25_score": 1.4620350675743847
+            },
+            {
+              "chunk_id": "69053133-f917-58ee-af91-d419ebb2e2a7",
+              "chunk_hash": "7dffbf447bb36a2239d3a901be0103d24f08de0c278623719dbc1f80fd6875e9",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.031754032258064516,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": 4,
+              "dense_score": 0.34576765,
+              "bm25_score": 1.1649646148970891
+            },
+            {
+              "chunk_id": "b371436f-c759-50a9-a7bf-f41d7d0774f4",
+              "chunk_hash": "c368018423ada3a7c124160154f89399b65c59af7734929308d852cefef0dd82",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.03128054740957967,
+              "score_kind": "rrf",
+              "dense_rank": 6,
+              "bm25_rank": 2,
+              "dense_score": 0.22763652,
+              "bm25_score": 1.3022355192182915
+            },
+            {
+              "chunk_id": "a9dfbfd2-f5ed-566b-885f-c01c7862c01a",
+              "chunk_hash": "bba07d53b0dbfe019d4b0d757495c41253668cdcea7dd5ad49d70f3c10116ca1",
+              "document_hash": "31424b78e7e77cddc5583f97304d10d530d2bffd0f9bca70648b8f03d19e5e6a",
+              "accession_number": "0001104659-26-107526",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+              "score": 0.03036576949620428,
+              "score_kind": "rrf",
+              "dense_rank": 9,
+              "bm25_rank": 3,
+              "dense_score": 0.19097206,
+              "bm25_score": 1.2403701147350576
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 3,
+      "hybrid_chunks_outside_dense_top_5": 2
+    },
+    {
+      "query": "directors",
+      "ticker": "GOOGL",
+      "form": "8-K",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 78.656,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 11,
+            "dense_candidates": 11,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "d9dc4729-f181-5142-a04d-8a39711b849b",
+              "chunk_hash": "d2362fd51f7865570e9fef0643d07a1d9ad658dff3477645c7bfd0595c27d1e1",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.18220809,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.18220809,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "a0d2153b-6a3c-56db-8361-aff2400d0be4",
+              "chunk_hash": "ea7edd9486eac4699b0286f0e005c196d43da8a93773328a111e21e7a3578b54",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.18051097,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.18051097,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "67880e75-a520-5410-8905-70c793e41602",
+              "chunk_hash": "c9afe539b6e83d92236f9c857461d77319581f32e4acd9fb52869e66ecba1838",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.1557348,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.1557348,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "781a5b7b-c863-573f-ac79-7a43a17042d1",
+              "chunk_hash": "41f60edd422597eb8ae96fac5c072678b794f92eb076bd56d3b10451b410014c",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.1497275,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.1497275,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "46f9bb4d-e10e-5b4e-9c77-d9675cc118b8",
+              "chunk_hash": "b2d4b41cf5c146df6a6d741bf8d234b9c0a07f78bdd4407ac151f4920df492f3",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.1369664,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.1369664,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 9.565,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 11,
+            "dense_candidates": 0,
+            "bm25_candidates": 0
+          },
+          "hits": []
+        },
+        "hybrid": {
+          "elapsed_ms": 67.719,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 11,
+            "dense_candidates": 11,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "d9dc4729-f181-5142-a04d-8a39711b849b",
+              "chunk_hash": "d2362fd51f7865570e9fef0643d07a1d9ad658dff3477645c7bfd0595c27d1e1",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.01639344262295082,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.18220809,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "a0d2153b-6a3c-56db-8361-aff2400d0be4",
+              "chunk_hash": "ea7edd9486eac4699b0286f0e005c196d43da8a93773328a111e21e7a3578b54",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.016129032258064516,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.18051097,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "67880e75-a520-5410-8905-70c793e41602",
+              "chunk_hash": "c9afe539b6e83d92236f9c857461d77319581f32e4acd9fb52869e66ecba1838",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.015873015873015872,
+              "score_kind": "rrf",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.1557348,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "781a5b7b-c863-573f-ac79-7a43a17042d1",
+              "chunk_hash": "41f60edd422597eb8ae96fac5c072678b794f92eb076bd56d3b10451b410014c",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.015625,
+              "score_kind": "rrf",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.1497275,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "46f9bb4d-e10e-5b4e-9c77-d9675cc118b8",
+              "chunk_hash": "b2d4b41cf5c146df6a6d741bf8d234b9c0a07f78bdd4407ac151f4920df492f3",
+              "document_hash": "2c9e5d5b1a7249f7cc387feef0ebc3112de226c7b177564aa07de34e1745e9c9",
+              "accession_number": "0001193125-26-342390",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526342390/d171253d8k.htm",
+              "score": 0.015384615384615385,
+              "score_kind": "rrf",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.1369664,
+              "bm25_score": null
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 0,
+      "hybrid_chunks_outside_dense_top_5": 0
+    },
+    {
+      "query": "advertising revenue",
+      "ticker": "META",
+      "form": "10-Q",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 82.653,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 431,
+            "dense_candidates": 40,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "1586ace1-6a2c-5261-a872-c40fcbb0176a",
+              "chunk_hash": "0909064480f4642d9fe413d9ad9c020ffc56c21104aa78f788393774bcb851c6",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.7150062,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.7150062,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "8b80cd3c-bb39-50a4-b2b9-3ca000d6b63b",
+              "chunk_hash": "c1bb9f8e780873fee68ecf930bc6fa30338651403dfc09350b91c36813759a80",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.6988716,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.6988716,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "a8775fd3-19a5-540c-bc12-3f0bc7e89901",
+              "chunk_hash": "db4e74176a81c2a83b77eab439f1a5127d31853f51253d0effc5174bf75dd359",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.67177224,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.67177224,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "23b72a7a-4eb6-5ad7-b31e-c32f1f3270dd",
+              "chunk_hash": "028c134034db85ae48c011faf313450669133eea79034b29f6a1ff91af35825e",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.64072204,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.64072204,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "e8112dbf-ff48-53a0-a835-29971d9d97df",
+              "chunk_hash": "548c93a3c298b4afc5aea24f713c0f268cd2c4692ee3ad66f97207b890b5eac6",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.6316819,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.6316819,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 123.648,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 431,
+            "dense_candidates": 0,
+            "bm25_candidates": 40
+          },
+          "hits": [
+            {
+              "chunk_id": "a8c28b4e-93ab-5afc-b698-bf089705a37d",
+              "chunk_hash": "3683089364e569565e5f3f1f1fb85929d83ac0f07725f4393b05303855629e0d",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 5.606886949238156,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 5.606886949238156
+            },
+            {
+              "chunk_id": "1586ace1-6a2c-5261-a872-c40fcbb0176a",
+              "chunk_hash": "0909064480f4642d9fe413d9ad9c020ffc56c21104aa78f788393774bcb851c6",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 5.488119757922093,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 2,
+              "dense_score": null,
+              "bm25_score": 5.488119757922093
+            },
+            {
+              "chunk_id": "23b72a7a-4eb6-5ad7-b31e-c32f1f3270dd",
+              "chunk_hash": "028c134034db85ae48c011faf313450669133eea79034b29f6a1ff91af35825e",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 5.309427547318272,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 3,
+              "dense_score": null,
+              "bm25_score": 5.309427547318272
+            },
+            {
+              "chunk_id": "bd838a9a-dc2c-5b7c-972e-69c2bcf2adf7",
+              "chunk_hash": "2e29acf2d249b55ffe31675380b1f9f7d854688b14338b8a61eb4d590d47a189",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 5.258299285556582,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 4,
+              "dense_score": null,
+              "bm25_score": 5.258299285556582
+            },
+            {
+              "chunk_id": "7ebca679-9e71-5e68-8c47-747c6380cc5a",
+              "chunk_hash": "d9180be7c2375e48cf9acd6f7adba1b5aaf7d02fe7bd61123fd3489db242f0c7",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 5.208060500231504,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 5,
+              "dense_score": null,
+              "bm25_score": 5.208060500231504
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 166.682,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 431,
+            "dense_candidates": 40,
+            "bm25_candidates": 40
+          },
+          "hits": [
+            {
+              "chunk_id": "1586ace1-6a2c-5261-a872-c40fcbb0176a",
+              "chunk_hash": "0909064480f4642d9fe413d9ad9c020ffc56c21104aa78f788393774bcb851c6",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.03252247488101534,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": 2,
+              "dense_score": 0.7150062,
+              "bm25_score": 5.488119757922093
+            },
+            {
+              "chunk_id": "23b72a7a-4eb6-5ad7-b31e-c32f1f3270dd",
+              "chunk_hash": "028c134034db85ae48c011faf313450669133eea79034b29f6a1ff91af35825e",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.03149801587301587,
+              "score_kind": "rrf",
+              "dense_rank": 4,
+              "bm25_rank": 3,
+              "dense_score": 0.64072204,
+              "bm25_score": 5.309427547318272
+            },
+            {
+              "chunk_id": "a8c28b4e-93ab-5afc-b698-bf089705a37d",
+              "chunk_hash": "3683089364e569565e5f3f1f1fb85929d83ac0f07725f4393b05303855629e0d",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.03131881575727918,
+              "score_kind": "rrf",
+              "dense_rank": 7,
+              "bm25_rank": 1,
+              "dense_score": 0.62486726,
+              "bm25_score": 5.606886949238156
+            },
+            {
+              "chunk_id": "8b80cd3c-bb39-50a4-b2b9-3ca000d6b63b",
+              "chunk_hash": "c1bb9f8e780873fee68ecf930bc6fa30338651403dfc09350b91c36813759a80",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.030834914611005692,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": 8,
+              "dense_score": 0.6988716,
+              "bm25_score": 5.002816924339981
+            },
+            {
+              "chunk_id": "a8775fd3-19a5-540c-bc12-3f0bc7e89901",
+              "chunk_hash": "db4e74176a81c2a83b77eab439f1a5127d31853f51253d0effc5174bf75dd359",
+              "document_hash": "767054d6424985927ffa9a84d8935b87a6a6c30ac9778e9fac43e1afbf2e11f4",
+              "accession_number": "0001628280-26-050705",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+              "score": 0.03036576949620428,
+              "score_kind": "rrf",
+              "dense_rank": 3,
+              "bm25_rank": 9,
+              "dense_score": 0.67177224,
+              "bm25_score": 4.999378623512768
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 2,
+      "hybrid_chunks_outside_dense_top_5": 1
+    },
+    {
+      "query": "automotive regulatory credits",
+      "ticker": "TSLA",
+      "form": "10-Q",
+      "modes": {
+        "dense": {
+          "elapsed_ms": 61.394,
+          "retrieval": {
+            "mode": "dense",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": null,
+            "min_dense_score": null,
+            "scoped_chunks": 160,
+            "dense_candidates": 40,
+            "bm25_candidates": 0
+          },
+          "hits": [
+            {
+              "chunk_id": "db5ab5ea-a877-5830-8866-cf8b64bc94b3",
+              "chunk_hash": "561d6c3cb89ccc2b2ad4e6afb706582b03da7ed70ffaa0a80c787a92a46b5b31",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.599545,
+              "score_kind": "cosine",
+              "dense_rank": 1,
+              "bm25_rank": null,
+              "dense_score": 0.599545,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "22bf49b0-f867-5d38-90d4-79e87d369b34",
+              "chunk_hash": "522b1fa322968f9496a635877b54579f9dc2f43bc135ebfa20e51d124282d2f6",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.56679404,
+              "score_kind": "cosine",
+              "dense_rank": 2,
+              "bm25_rank": null,
+              "dense_score": 0.56679404,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "803d88f2-26fe-5652-8b26-9cd299801452",
+              "chunk_hash": "3ad269a3786713c61ba9ba802efc7af2c7109b4abafa27e5e2462a4e2f9c577a",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.5233623,
+              "score_kind": "cosine",
+              "dense_rank": 3,
+              "bm25_rank": null,
+              "dense_score": 0.5233623,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "6850f76c-9e59-5722-b785-423245acda0d",
+              "chunk_hash": "ba7e56f40446e40d0a34a686351036d120aa51156e78087ad088486ec9fe08b5",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.5085345,
+              "score_kind": "cosine",
+              "dense_rank": 4,
+              "bm25_rank": null,
+              "dense_score": 0.5085345,
+              "bm25_score": null
+            },
+            {
+              "chunk_id": "c914b6b9-8225-589a-964f-829035d45942",
+              "chunk_hash": "176d4510f820e7db97cbbcf0a7ea7e2ff049aebc4ebbfddcc00afa885b4f009b",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.47580868,
+              "score_kind": "cosine",
+              "dense_rank": 5,
+              "bm25_rank": null,
+              "dense_score": 0.47580868,
+              "bm25_score": null
+            }
+          ]
+        },
+        "bm25": {
+          "elapsed_ms": 49.145,
+          "retrieval": {
+            "mode": "bm25",
+            "candidate_window": 40,
+            "rrf_version": null,
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 160,
+            "dense_candidates": 0,
+            "bm25_candidates": 40
+          },
+          "hits": [
+            {
+              "chunk_id": "db5ab5ea-a877-5830-8866-cf8b64bc94b3",
+              "chunk_hash": "561d6c3cb89ccc2b2ad4e6afb706582b03da7ed70ffaa0a80c787a92a46b5b31",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 9.807384905187572,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 1,
+              "dense_score": null,
+              "bm25_score": 9.807384905187572
+            },
+            {
+              "chunk_id": "3b22a12a-23e6-58f4-8748-9c43b37e5643",
+              "chunk_hash": "81901d158256c793929305ebc827a019258d319b884e12be6102b9aef0751e36",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 8.680420385250176,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 2,
+              "dense_score": null,
+              "bm25_score": 8.680420385250176
+            },
+            {
+              "chunk_id": "803d88f2-26fe-5652-8b26-9cd299801452",
+              "chunk_hash": "3ad269a3786713c61ba9ba802efc7af2c7109b4abafa27e5e2462a4e2f9c577a",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 7.8125835433763084,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 3,
+              "dense_score": null,
+              "bm25_score": 7.8125835433763084
+            },
+            {
+              "chunk_id": "3bbec991-b42e-5982-bc9d-43a7117e8030",
+              "chunk_hash": "8dbd4d3ad4dcf32db26fb1f70628f8e648930c971924cd681a0d1df69a068ab4",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 7.441565355334124,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 4,
+              "dense_score": null,
+              "bm25_score": 7.441565355334124
+            },
+            {
+              "chunk_id": "c78a2c28-581b-5633-875c-1f3feb98a7a4",
+              "chunk_hash": "1556bae67e337112cc901222c444024ede56bafc83c8dd4e851da8b71b239cf9",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 7.277171928125323,
+              "score_kind": "bm25",
+              "dense_rank": null,
+              "bm25_rank": 5,
+              "dense_score": null,
+              "bm25_score": 7.277171928125323
+            }
+          ]
+        },
+        "hybrid": {
+          "elapsed_ms": 83.909,
+          "retrieval": {
+            "mode": "hybrid",
+            "candidate_window": 40,
+            "rrf_version": "rrf-v1-k60-window40",
+            "bm25_version": "bm25-nfkc-v1-k1-1.2-b-0.75",
+            "min_dense_score": null,
+            "scoped_chunks": 160,
+            "dense_candidates": 40,
+            "bm25_candidates": 40
+          },
+          "hits": [
+            {
+              "chunk_id": "db5ab5ea-a877-5830-8866-cf8b64bc94b3",
+              "chunk_hash": "561d6c3cb89ccc2b2ad4e6afb706582b03da7ed70ffaa0a80c787a92a46b5b31",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.03278688524590164,
+              "score_kind": "rrf",
+              "dense_rank": 1,
+              "bm25_rank": 1,
+              "dense_score": 0.599545,
+              "bm25_score": 9.807384905187572
+            },
+            {
+              "chunk_id": "803d88f2-26fe-5652-8b26-9cd299801452",
+              "chunk_hash": "3ad269a3786713c61ba9ba802efc7af2c7109b4abafa27e5e2462a4e2f9c577a",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.031746031746031744,
+              "score_kind": "rrf",
+              "dense_rank": 3,
+              "bm25_rank": 3,
+              "dense_score": 0.5233623,
+              "bm25_score": 7.8125835433763084
+            },
+            {
+              "chunk_id": "6850f76c-9e59-5722-b785-423245acda0d",
+              "chunk_hash": "ba7e56f40446e40d0a34a686351036d120aa51156e78087ad088486ec9fe08b5",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.030776515151515152,
+              "score_kind": "rrf",
+              "dense_rank": 4,
+              "bm25_rank": 6,
+              "dense_score": 0.5085345,
+              "bm25_score": 7.214796909769094
+            },
+            {
+              "chunk_id": "22bf49b0-f867-5d38-90d4-79e87d369b34",
+              "chunk_hash": "522b1fa322968f9496a635877b54579f9dc2f43bc135ebfa20e51d124282d2f6",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.030621785881252923,
+              "score_kind": "rrf",
+              "dense_rank": 2,
+              "bm25_rank": 9,
+              "dense_score": 0.56679404,
+              "bm25_score": 5.997053328686012
+            },
+            {
+              "chunk_id": "3b22a12a-23e6-58f4-8748-9c43b37e5643",
+              "chunk_hash": "81901d158256c793929305ebc827a019258d319b884e12be6102b9aef0751e36",
+              "document_hash": "18ea855a348d97974c5d7d696b3b68789904230ce364da9869afb231aaa26937",
+              "accession_number": "0001628280-26-049270",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+              "score": 0.030621785881252923,
+              "score_kind": "rrf",
+              "dense_rank": 9,
+              "bm25_rank": 2,
+              "dense_score": 0.45153898,
+              "bm25_score": 8.680420385250176
+            }
+          ]
+        }
+      },
+      "dense_bm25_overlap_at_5": 2,
+      "hybrid_chunks_outside_dense_top_5": 1
+    }
+  ]
+}

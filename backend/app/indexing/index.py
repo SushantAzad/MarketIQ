@@ -13,6 +13,7 @@ from app.database import schema as db
 from app.indexing.chunking import digest
 from app.indexing.corpus import import_corpus
 from app.indexing.embeddings import Encoder, validate_vectors
+from app.indexing.lexical import VERSION, publish_lexical
 from app.services.financial_import import put, stable_id
 
 ALIAS = "filing_chunks_active"
@@ -154,12 +155,18 @@ def _publish(
     if from_canonical and manifest != active["manifest_hash"]:
         raise ValueError("Canonical manifest checksum mismatch")
     existing = connection.execute(
-        sa.select(db.index_generations.c.id).where(
+        sa.select(db.index_generations.c.id)
+        .join(
+            db.lexical_generations,
+            db.lexical_generations.c.generation_id == db.index_generations.c.id,
+        )
+        .where(
             db.index_generations.c.manifest_hash == manifest,
             db.index_generations.c.state == "active",
+            db.lexical_generations.c.version == VERSION,
         )
     ).scalar_one_or_none()
-    generation_id = uuid4() if rebuild else existing or stable_id("generation", manifest)
+    generation_id = uuid4() if rebuild else existing or stable_id("generation", manifest + VERSION)
     name = f"filing_chunks_{settings.embedding_revision[:12]}_{generation_id.hex}"
     expected = {
         str(c["id"]): {**c["payload"], "index_generation": str(generation_id)} for c in corpus
@@ -259,6 +266,7 @@ def _publish(
                 wait=True,
             )
     validate_collection(qdrant, name, expected, encoder.dimension, cached)
+    publish_lexical(connection, generation_id, corpus, manifest)
     if not active:
         connection.execute(
             db.index_generations.update()
@@ -302,10 +310,11 @@ def _publish(
         "cached_embeddings": len(texts) - len(missing),
         "upstream_refreshed": False,
         "validated": True,
+        "lexical_version": VERSION,
     }
 
 
-def search(
+def _dense_search(
     engine: sa.Engine,
     encoder: Encoder,
     qdrant: QdrantClient,
@@ -317,6 +326,8 @@ def search(
     section: str | None = None,
     accepted_before: datetime | None = None,
     limit: int = 5,
+    generation_id: UUID | None = None,
+    allowed_ids: list[str] | None = None,
 ) -> dict[str, Any]:
     if not query.strip() or not 1 <= limit <= 40:
         raise ValueError("Invalid query or result limit")
@@ -325,7 +336,11 @@ def search(
     with engine.connect() as connection:
         generation = (
             connection.execute(
-                sa.select(db.index_generations).where(db.index_generations.c.state == "active")
+                sa.select(db.index_generations).where(
+                    db.index_generations.c.id == generation_id
+                    if generation_id is not None
+                    else db.index_generations.c.state == "active"
+                )
             )
             .mappings()
             .one_or_none()
@@ -337,7 +352,7 @@ def search(
             or alias_target(qdrant) != generation["collection_name"]
         ):
             raise ValueError("Index activation/model mismatch; rebuild or replay required")
-        conditions: list[models.FieldCondition] = [
+        conditions: list[models.Condition] = [
             models.FieldCondition(key=key, match=models.MatchValue(value=value))
             for key, value in {
                 "tickers": ticker,
@@ -353,6 +368,8 @@ def search(
                     key="accepted_at", range=models.DatetimeRange(lte=accepted_before)
                 )
             )
+        if allowed_ids is not None:
+            conditions.append(models.HasIdCondition(has_id=list(allowed_ids)))
         vector = encoder.encode([query])[0]
         hits = qdrant.query_points(
             generation["collection_name"],
@@ -397,3 +414,36 @@ def search(
             "generation": str(generation["id"]),
             "results": results,
         }
+
+
+def search(
+    engine: sa.Engine,
+    encoder: Encoder | None,
+    qdrant: QdrantClient,
+    query: str,
+    *,
+    ticker: str | None = None,
+    form: str | None = None,
+    accession: str | None = None,
+    section: str | None = None,
+    accepted_before: datetime | None = None,
+    limit: int = 5,
+    mode: str = "dense",
+    min_dense_score: float | None = None,
+) -> dict[str, Any]:
+    from app.indexing.retrieval import retrieve
+
+    return retrieve(
+        engine,
+        encoder,
+        qdrant,
+        query,
+        ticker=ticker,
+        form=form,
+        accession=accession,
+        section=section,
+        accepted_before=accepted_before,
+        limit=limit,
+        mode=mode,
+        min_dense_score=min_dense_score,
+    )

@@ -8,6 +8,7 @@ from app.core.config import Settings
 from app.database.connection import database_engine
 from app.indexing.embeddings import SentenceEncoder
 from app.indexing.index import client
+from app.research.reranking import provision
 from app.research.service import ResearchRequest, read_run, research
 
 
@@ -24,16 +25,21 @@ def main() -> int:
     show = sub.add_parser("show")
     show.add_argument("run_id", type=UUID)
     sub.add_parser("status")
+    sub.add_parser("provision-reranker")
     args = parser.parse_args()
     try:
         settings = Settings()
-        if args.command == "status":
-            output: object = {
+        if args.command == "provision-reranker":
+            output: object = provision(settings)
+        elif args.command == "status":
+            output = {
                 "baseline": "extractive-rag-v1",
                 "provider": settings.llm_provider,
                 "model": settings.llm_model,
                 "connectivity_tested": False,
                 "generation_configured": settings.llm_provider != "disabled",
+                "retrieval_mode": settings.rag_retrieval_mode,
+                "reranker_enabled": settings.reranker_enabled,
             }
         else:
             request = (
@@ -54,7 +60,9 @@ def main() -> int:
                         print(json.dumps({"status": "NOT_FOUND"}))
                         return 1
                 else:
-                    encoder = SentenceEncoder(settings)
+                    encoder = (
+                        None if settings.rag_retrieval_mode == "bm25" else SentenceEncoder(settings)
+                    )
                     qdrant = client(settings)
                     try:
                         output = research(engine, encoder, qdrant, settings, request)
