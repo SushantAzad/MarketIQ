@@ -79,8 +79,24 @@ def load_issuers(connection: sa.Connection) -> list[Issuer]:
 def plan_query(request: QueryRequest, registry: list[Issuer]) -> QueryPlan:
     text = normalized(request.question)
     issues: list[str] = []
+    currencies = {
+        "USD": ("usd", "us dollars"),
+        "EUR": ("eur", "euros"),
+        "GBP": ("gbp", "pounds"),
+        "JPY": ("jpy", "yen"),
+        "INR": ("inr", "rupees"),
+    }
+    if any(
+        code != request.unit and any(contains(text, word) for word in words)
+        for code, words in currencies.items()
+    ):
+        issues.append(
+            "The question currency conflicts with the explicit unit; specify the intended unit."
+        )
     if re.search(r"\b(not|except|instead)\b", text):
-        issues.append("Restate the requested metrics directly; negated routing instructions are ambiguous.")
+        issues.append(
+            "Restate the requested metrics directly; negated routing instructions are ambiguous."
+        )
     by_ticker = {i.ticker: i for i in registry}
     explicit = set(request.tickers)
     mentioned = {i.ticker for i in registry if any(contains(text, a) for a in i.aliases)}
@@ -152,13 +168,21 @@ def plan_query(request: QueryRequest, registry: list[Issuer]) -> QueryPlan:
                 period = Period(basis=basis, period_end=dates[0])
             except ValueError:
                 issues.append("Provide a valid period end date.")
-    if period and dates and str(period.period_end) not in dates and not request.issuer_periods:
-        issues.append("The question date conflicts with the explicit reporting period.")
+    scopes = list(request.issuer_periods.values()) + ([period] if period else [])
+    allowed_dates = {
+        str(d) for scope in scopes for d in (scope.period_end, scope.comparison_end) if d
+    }
+    if request.as_of:
+        allowed_dates.add(str(request.as_of.date()))
+    if metrics and scopes and set(dates) - allowed_dates:
+        issues.append(
+            "Question dates conflict with the explicit reporting/comparison/cutoff dates."
+        )
     if len(dates) > 1 and not request.period and not request.issuer_periods:
         issues.append("Assign multiple dates explicitly to reporting and comparison periods.")
-    if re.search(r"\b(as of)\b", text) and request.period and len(dates) == 1:
-        # A cutoff date and a reporting date are separate concepts.
-        issues = [i for i in issues if i != "The question date conflicts with the explicit reporting period."]
+    cutoff_match = re.search(r"\bas\s+of\s+(\d{4}-\d{2}-\d{2})", request.question, re.I)
+    if cutoff_match and request.as_of and cutoff_match[1] != str(request.as_of.date()):
+        issues.append("The question cutoff conflicts with the explicit as-of timestamp.")
     if (
         re.search(r"\b(latest|today|current)\b", text)
         and metrics
@@ -168,6 +192,12 @@ def plan_query(request: QueryRequest, registry: list[Issuer]) -> QueryPlan:
         issues.append("Specify an exact reporting period; latest financial facts are not inferred.")
     if (document or company) and request.form is None:
         issues.append("Specify a filing form for document evidence (for example 10-K).")
+    if (
+        (document or company)
+        and request.accession is None
+        and re.search(r"\b(last year|last quarter|previous|historical|earlier)\b", text)
+    ):
+        issues.append("Historical filing requests require an explicit accession.")
     if (document or company) and metrics and request.accession is None:
         issues.append(
             "Combined metric explanations require an explicit accession for period-scoped evidence."
@@ -186,10 +216,20 @@ def plan_query(request: QueryRequest, registry: list[Issuer]) -> QueryPlan:
         for metric in metrics:
             if scope is None:
                 issues.append(f"Specify reporting basis and period end for {issuer.ticker}.")
-            balances = {"assets", "liabilities", "equity", "cash", "current_assets",
-                        "current_liabilities", "current_ratio", "debt_equity"}
+            balances = {
+                "assets",
+                "liabilities",
+                "equity",
+                "cash",
+                "current_assets",
+                "current_liabilities",
+                "current_ratio",
+                "debt_equity",
+            }
             if scope and not generic and (metric in balances) != (scope.basis == "instant"):
-                issues.append(f"Specify {'instant' if metric in balances else 'duration'} basis for {metric}.")
+                issues.append(
+                    f"Specify {'instant' if metric in balances else 'duration'} basis for {metric}."
+                )
             if scope and (
                 metric in {"growth", "yoy", "cagr", "fcf_growth", "discrete_quarter"}
             ) != (scope.comparison_end is not None):
@@ -215,7 +255,7 @@ def plan_query(request: QueryRequest, registry: list[Issuer]) -> QueryPlan:
                 steps.append(Step(intent=intent, ticker=issuer.ticker))
     if not metrics and not any([document, company, market, risk]):
         issues.append(
-            "Specify a supported financial metric, filing question, market request, or risk request."
+            "Specify a supported metric, filing question, market request, or risk request."
         )
     if comparison and not metrics:
         issues.append("Specify financial metrics and periods to align a company comparison.")

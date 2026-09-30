@@ -2,7 +2,27 @@
 
 Real Time Financial Intelligence Platform — an incremental, evidence-backed financial research application.
 
-**Current scope: Phase 8 deterministic financial calculations.** SEC ingestion, PostgreSQL financial facts, hybrid retrieval, bounded offline reranking, cited research traces, and versioned Decimal calculations with persisted operand lineage are implemented. Model-assisted passage selection requires a configured inference endpoint; this installation currently returns cited evidence only. Query routing, free-form synthesis, public API endpoints, and ML remain later work. The frontend is still a development entry point; use the CLI for financial data and research.
+**Current scope: Phase 10 resumable LangGraph workflows.** SEC ingestion, PostgreSQL financial facts, hybrid retrieval, offline reranking, cited research, Decimal calculations, multi-intent routing, and durable workflow boundaries are implemented. Model-assisted passage selection requires a configured inference endpoint; this installation currently returns cited evidence only. Public API endpoints and ML remain later work. **Frontend dashboard design and implementation are Phase 14**; use the CLI until then.
+
+Submit a persistent research job, then run or resume it:
+
+```powershell
+uv sync --locked
+uv run --locked --directory backend python -m app.database migrate
+uv run --locked --directory backend python -m app.workflow submit "NVDA revenue and net margin" --basis annual --period-end 2026-01-25
+uv run --locked --directory backend python -m app.workflow run <job-id>
+uv run --locked --directory backend python -m app.workflow show <job-id>
+```
+
+The same `run` command resumes an interrupted job from its last completed stage. Jobs retain questions and evidence for a configured seven-day window; run `python -m app.workflow purge-expired` from the backend directory to remove expired jobs. See [the workflow contract](docs/phase-10-workflow-contract.md) for recovery limits and status meanings.
+
+Plan or run a combined request:
+
+```powershell
+uv run --locked --directory backend python -m app.routing ask "NVDA revenue and net margin" --basis annual --period-end 2026-01-25
+```
+
+Use `plan` instead of `ask` to inspect intent/tool selection without executing it. Ambiguous scopes require clarification; unavailable document, market or risk services do not erase successful structured results. See [the routing contract](docs/phase-9-routing-contract.md) for comparisons and document evidence examples.
 
 Calculate from explicitly dated stored facts:
 

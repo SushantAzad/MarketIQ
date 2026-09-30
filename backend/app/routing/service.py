@@ -58,13 +58,19 @@ def alignment(rows: list[dict[str, Any]], expected: set[str]) -> list[dict[str, 
                 "period_start": r["result"].get("period_start"),
                 "period_end": r["result"].get("period_end"),
                 "comparison_period_end": r["result"].get("comparison_period_end"),
+                "comparison_period_start": r["result"]
+                .get("operands", {})
+                .get("previous", {})
+                .get("period_start"),
                 "unit": r["result"].get("unit"),
             }
             for r in members
         ]
         signatures = {tuple(str(p[k]) for k in p if k != "ticker") for p in periods}
-        available = (all(r["result"].get("value") is not None for r in members)
-                     and {r["step"]["ticker"] for r in members} == expected)
+        available = (
+            all(r["result"].get("value") is not None for r in members)
+            and {r["step"]["ticker"] for r in members} == expected
+        )
         aligned = available and len(signatures) == 1 and len(members) >= 2
         output.append(
             {
@@ -89,6 +95,8 @@ def execute_query(
     request: QueryRequest,
     *,
     documents: DocumentReader | None = None,
+    prepared_plan: QueryPlan | None = None,
+    structured_cutoff: datetime | None = None,
 ) -> dict[str, Any]:
     facts: list[dict[str, Any]] = []
     calculated: list[dict[str, Any]] = []
@@ -96,7 +104,9 @@ def execute_query(
     unavailable: list[dict[str, Any]] = []
     with engine.connect().execution_options(isolation_level="REPEATABLE READ") as connection:
         with connection.begin():
-            plan = plan_query(request, load_issuers(connection))
+            plan = prepared_plan or plan_query(request, load_issuers(connection))
+            if plan.request != request:
+                raise ValueError("Prepared plan request mismatch")
             result: dict[str, Any] = {
                 "plan": plan.model_dump(mode="json"),
                 "status": plan.status,
@@ -112,7 +122,7 @@ def execute_query(
             }
             if plan.status != "READY":
                 return result
-            cutoff = request.as_of or datetime.now(UTC)
+            cutoff = request.as_of or structured_cutoff or datetime.now(UTC)
             result["structured_as_of"] = cutoff.isoformat()
             for step in plan.steps:
                 if step.intent not in {Intent.FACT, Intent.CALCULATION}:
@@ -163,11 +173,11 @@ def execute_query(
                 }
             )
         elif step.intent in {Intent.DOCUMENT, Intent.COMPANY}:
-            reason = document_scope_error(engine, plan, step)
-            if reason:
-                unavailable.append({"step": step.model_dump(mode="json"), "reason": reason})
-                continue
             try:
+                reason = document_scope_error(engine, plan, step)
+                if reason:
+                    unavailable.append({"step": step.model_dump(mode="json"), "reason": reason})
+                    continue
                 value = (
                     documents(step, request)
                     if documents

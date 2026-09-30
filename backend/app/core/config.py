@@ -52,6 +52,7 @@ class Settings(BaseSettings):
     rag_min_score: float = Field(default=0.3, ge=-1, le=1)
     rag_max_context_chars: int = Field(default=12000, ge=1000, le=50000)
     reranker_enabled: bool = False
+    workflow_retention_days: int = Field(default=7, ge=1, le=90)
     reranker_batch_size: int = Field(default=8, ge=1, le=40)
 
     sec_enabled: bool = False

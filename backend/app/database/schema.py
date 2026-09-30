@@ -177,6 +177,22 @@ lexical_chunks = sa.Table(
     ),
 )
 
+workflow_jobs = sa.Table(
+    "workflow_jobs",
+    metadata,
+    identity(),
+    sa.Column("version", sa.String(40), nullable=False),
+    sa.Column("status", sa.String(32), nullable=False),
+    sa.Column("state", JSONB, nullable=False),
+    sa.Column("last_error", sa.String(80)),
+    sa.Column("updated_at", sa.DateTime(timezone=True), nullable=False),
+    sa.Column("expires_at", sa.DateTime(timezone=True), nullable=False),
+    created(),
+    sa.CheckConstraint(
+        "status IN ('QUEUED','RUNNING','FAILED','COMPLETED','NEEDS_CLARIFICATION')", name="status"
+    ),
+)
+
 research_runs = sa.Table(
     "research_runs",
     metadata,
