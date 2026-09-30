@@ -117,8 +117,10 @@ def audit(engine: sa.Engine, settings: Settings) -> dict[str, Any]:
                     as_of=cutoff,
                 )
 
-            def ratio(numerator: str, denominator: str) -> float | None:
-                a, b = facts[numerator], facts[denominator]
+            def ratio(
+                numerator: str, denominator: str, sources: dict[str, Any] = facts
+            ) -> float | None:
+                a, b = sources[numerator], sources[denominator]
                 if a["value"] is None or b["value"] is None or Decimal(b["value"]) <= 0:
                     return None
                 if (
@@ -184,7 +186,8 @@ def audit(engine: sa.Engine, settings: Settings) -> dict[str, Any]:
         "feature_cutoffs_examined": len(seen),
         "rows": accepted,
         "pending": pending,
-        "unclassified_rows_excluded": len(rows) - len(accepted),
+        "unclassified_rows_excluded": sum(r["cik"] not in eligible for r in rows),
+        "duplicate_outcomes_excluded": sum(r["cik"] in eligible for r in rows) - len(accepted),
         "cohort": cohort,
         "inference_available": False,
     }

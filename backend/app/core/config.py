@@ -24,6 +24,8 @@ class Settings(BaseSettings):
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "INFO"
     api_host: str = "127.0.0.1"
     api_port: int = Field(default=8000, ge=1, le=65535)
+    api_key: SecretStr | None = None
+    api_requests_per_minute: int = Field(default=120, ge=1, le=10000)
     cors_origins: list[str] = ["http://localhost:5173", "http://127.0.0.1:5173"]
     request_timeout_seconds: float = Field(default=20, gt=0, le=120)
 
